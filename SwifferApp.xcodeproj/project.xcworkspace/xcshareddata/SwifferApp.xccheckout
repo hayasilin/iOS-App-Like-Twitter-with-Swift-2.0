@@ -12,34 +12,22 @@
 	<dict>
 		<key>337091F3C99A796D47B2224E9969E765536C295B</key>
 		<string>https://github.com/Kkhattab/App-Like-Twitter.git</string>
-		<key>BDF3DDB3682B6CDE6BE01B107B0EBDD421C19B79</key>
-		<string>https://github.com/hayasilin/Crack-the-term.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SwifferApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>337091F3C99A796D47B2224E9969E765536C295B</key>
-		<string>../../../SwifferApp</string>
-		<key>BDF3DDB3682B6CDE6BE01B107B0EBDD421C19B79</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/hayasilin/Crack-the-term.git</string>
+	<string>https://github.com/Kkhattab/App-Like-Twitter.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>BDF3DDB3682B6CDE6BE01B107B0EBDD421C19B79</string>
+	<string>337091F3C99A796D47B2224E9969E765536C295B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>BDF3DDB3682B6CDE6BE01B107B0EBDD421C19B79</string>
-			<key>IDESourceControlWCCName</key>
-			<string>Crack-the-term</string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

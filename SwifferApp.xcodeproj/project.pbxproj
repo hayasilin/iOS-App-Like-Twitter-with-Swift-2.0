@@ -31,6 +31,8 @@
 		141984511A102D8300999767 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141984501A102D8300999767 /* Social.framework */; };
 		141984531A102DFE00999767 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141984521A102DFE00999767 /* Accounts.framework */; };
 		14C7AE9E1A2543B500F777EA /* SwifferApp-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 141358591A0EB112000E08A8 /* SwifferApp-Bridging-Header.h */; };
+		ACC83B9C1B63E464003D4C17 /* LogInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC83B9B1B63E464003D4C17 /* LogInSignUpViewController.swift */; };
+		ACC83B9E1B63EE27003D4C17 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC83B9D1B63EE27003D4C17 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		14177D0A1A143D4E00BBE607 /* DirectMessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectMessageTableViewController.swift; sourceTree = "<group>"; };
 		141984501A102D8300999767 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		141984521A102DFE00999767 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		ACC83B9B1B63E464003D4C17 /* LogInSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInSignUpViewController.swift; path = ../LogInSignUpViewController.swift; sourceTree = "<group>"; };
+		ACC83B9D1B63EE27003D4C17 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 		141358181A0EAEC7000E08A8 /* SwifferApp */ = {
 			isa = PBXGroup;
 			children = (
+				ACC83B9D1B63EE27003D4C17 /* SignUpViewController.swift */,
+				ACC83B9B1B63E464003D4C17 /* LogInSignUpViewController.swift */,
 				1413581B1A0EAEC7000E08A8 /* AppDelegate.swift */,
 				140322181A0ECC5200CAEDA4 /* TimeLineTableViewController.swift */,
 				1403221A1A0ECD3200CAEDA4 /* ComposeViewController.swift */,
@@ -292,6 +298,8 @@
 			files = (
 				14C7AE9E1A2543B500F777EA /* SwifferApp-Bridging-Header.h in Sources */,
 				1413581C1A0EAEC7000E08A8 /* AppDelegate.swift in Sources */,
+				ACC83B9E1B63EE27003D4C17 /* SignUpViewController.swift in Sources */,
+				ACC83B9C1B63E464003D4C17 /* LogInSignUpViewController.swift in Sources */,
 				140322191A0ECC5200CAEDA4 /* TimeLineTableViewController.swift in Sources */,
 				1403221D1A0ED59400CAEDA4 /* SweetTableViewCell.swift in Sources */,
 				14177D0B1A143D4E00BBE607 /* DirectMessageTableViewController.swift in Sources */,

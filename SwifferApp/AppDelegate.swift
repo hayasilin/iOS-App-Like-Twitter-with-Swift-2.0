@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        UINavigationBar.appearance().barTintColor = UIColor.cyanColor();
-        UINavigationBar.appearance().tintColor = UIColor.orangeColor();
+        UINavigationBar.appearance().barTintColor = UIColor.purpleColor();
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor();
 
         Parse.setApplicationId("v8iskmxnkY8cyQOELQ7NdP5qkaCannLlb9kwKWPk", clientKey: "aV9APeDVSHYoRvm5DK1zAC3gfTXaHiKqONL9vDOS")
         
@@ -25,14 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
         
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
         
-        /*
-        swift version
-        
-        var testObject:PFObject = PFObject(className:"TestObject")
-        testObject["foo"] = "bar"
-        testObject.setObject("user1", forKey: "user")
-        testObject.saveInBackgroundWithTarget(nil , selector: nil)
-        */
         return true
     }
     

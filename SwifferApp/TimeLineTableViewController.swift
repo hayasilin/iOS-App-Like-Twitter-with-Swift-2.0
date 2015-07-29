@@ -59,6 +59,7 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
                 
                 if user != nil{
                     println("Login Successfully");
+                    
                 }else{
                     println("Login Failed");
                     var loginFail: UIAlertController = UIAlertController(title: "Login failed", message: "Please reenter Username and Password", preferredStyle: UIAlertControllerStyle.Alert);
