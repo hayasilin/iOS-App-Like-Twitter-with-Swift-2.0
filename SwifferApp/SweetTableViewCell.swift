@@ -34,14 +34,4 @@ class SweetTableViewCell: UITableViewCell {
         
     }
     
-
 }
-
-
-/*
-
-usernameLabel
-timestampLabel
-sweetTextView
-
-*/

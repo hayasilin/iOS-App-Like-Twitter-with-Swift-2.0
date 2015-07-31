@@ -13,7 +13,6 @@ class DirectMessageTableViewController: UITableViewController, UISearchBarDelega
     @IBOutlet var searchBar: UISearchBar! = UISearchBar()
     
    // var userList = [PFUser]()
-    
     var userList: NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
@@ -65,18 +64,13 @@ class DirectMessageTableViewController: UITableViewController, UISearchBarDelega
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
         return userList.count
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
@@ -88,8 +82,7 @@ class DirectMessageTableViewController: UITableViewController, UISearchBarDelega
 
         return cell
     }
-    
-    
+
      override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         var messageAlert:UIAlertController = UIAlertController(title: "New Direct Message", message:"Enter Your Message", preferredStyle: UIAlertControllerStyle.Alert)
@@ -98,8 +91,6 @@ class DirectMessageTableViewController: UITableViewController, UISearchBarDelega
             (textfield:UITextField!) -> Void in
             
             textfield.placeholder = "Your message"
-            
-        
         }
         
         messageAlert.addAction(UIAlertAction(title: "Send", style: UIAlertActionStyle.Default, handler: {
@@ -116,7 +107,6 @@ class DirectMessageTableViewController: UITableViewController, UISearchBarDelega
             
             push.setMessage(messageTextField.text)
             push.sendPushInBackgroundWithTarget(nil, selector: nil)
-            
             
         }))
         

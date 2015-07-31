@@ -15,6 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
+        //UIPageViewController
+        
+        var pageController = UIPageControl.appearance();
+        pageController.pageIndicatorTintColor = UIColor.lightGrayColor();
+        pageController.currentPageIndicatorTintColor = UIColor.whiteColor();
+        //pageController.backgroundColor = UIColor.purpleColor();
+        
+        //end
+        
         UINavigationBar.appearance().barTintColor = UIColor.purpleColor();
         UINavigationBar.appearance().tintColor = UIColor.whiteColor();
 
@@ -24,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
         let notificationSettings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
         
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        
+        
         
         return true
     }

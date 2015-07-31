@@ -16,6 +16,8 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.loadData();
+        
         if PFUser.currentUser() == nil {
             self.showLoginSignUp();
         }
@@ -179,10 +181,13 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
         
         
         //Add appearing animation
+        /*
         cell.sweetTextView.alpha = 0;
         cell.timestampLabel.alpha = 0;
         cell.usernameLabel.alpha = 0;
         cell.titleTextView.alpha = 0;
+        */
+
         
         //Show Date
         var dataFormer:NSDateFormatter = NSDateFormatter();
@@ -212,7 +217,7 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
                                 cell.profileImageView.image = image;
                             }
                         }
-
+                        
                         UIView.animateWithDuration(0.5, animations: {
                             cell.sweetTextView.alpha = 1;
                             cell.timestampLabel.alpha = 1;
@@ -220,6 +225,7 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
                             cell.profileImageView.alpha = 1;
                             cell.titleTextView.alpha = 1;
                         })
+                        
                     }
                 }
             }

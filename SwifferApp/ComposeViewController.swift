@@ -11,7 +11,7 @@
 
 import UIKit
 
-class ComposeViewController: UIViewController, UITextViewDelegate{
+class ComposeViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate{
 
     @IBOutlet weak var titleTextView: UITextView!
     @IBOutlet var sweetTextView: UITextView! = UITextView()
@@ -20,8 +20,6 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //sweetTextView.layer.borderColor = UIColor.blackColor().CGColor;
-        //sweetTextView.layer.borderWidth = 0.5;
         sweetTextView.layer.cornerRadius = 5;
         sweetTextView.delegate = self
         
@@ -30,6 +28,13 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
         //Open the keyboard when user hits the TextView
         titleTextView.becomeFirstResponder()
         
+        titleTextView.delegate = self;
+        sweetTextView.delegate = self;
+        locationTextView.delegate = self;
+    }
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        view.endEditing(true);
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,14 +45,22 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
     @IBAction func sendSweet(sender: AnyObject) {
         
         var sweet: PFObject = PFObject(className: "Sweets");
-        sweet["title"] = titleTextView.text;
-        sweet["content"] = sweetTextView.text;
-        sweet["sweeter"] = PFUser.currentUser();
-        sweet["location"] = locationTextView.text;
-        sweet.saveInBackgroundWithTarget(nil, selector: nil);
         
-        self.navigationController?.popToRootViewControllerAnimated(true);
-        
+        if (!titleTextView.text.isEmpty && !sweetTextView.text.isEmpty && !locationTextView.text.isEmpty){
+            sweet["title"] = titleTextView.text;
+            sweet["content"] = sweetTextView.text;
+            sweet["sweeter"] = PFUser.currentUser();
+            sweet["location"] = locationTextView.text;
+            sweet.saveInBackgroundWithTarget(nil, selector: nil);
+            
+            self.navigationController?.popToRootViewControllerAnimated(true);
+        }else{
+            println("不可有空白");
+            var composeError: UIAlertController = UIAlertController(title: "輸入錯誤", message: "不可以有空白", preferredStyle: UIAlertControllerStyle.Alert);
+            var composeErrorAction: UIAlertAction = UIAlertAction(title: "我知道了", style: UIAlertActionStyle.Default, handler: nil);
+            composeError.addAction(composeErrorAction);
+            self.presentViewController(composeError, animated: true, completion: nil);
+        }
     }
     
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
@@ -58,16 +71,5 @@ class ComposeViewController: UIViewController, UITextViewDelegate{
         
         return (newLength >= 140) ? false : true;
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

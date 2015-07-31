@@ -8,14 +8,20 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var signUpBtnOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        usernameTextField.delegate = self;
+        passwordTextField.delegate = self;
+        
+        signUpBtnOutlet.layer.cornerRadius = 5;
         
     }
     
@@ -27,6 +33,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         var sweeter: PFUser = PFUser();
         sweeter.username = usernameTextField.text;
         sweeter.password = passwordTextField.text;
+        sweeter.email = emailTextField.text;
         
         sweeter.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if error == nil {
@@ -40,7 +47,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                 self.presentViewController(imagePicker, animated: true, completion: nil);
                 
                 var signUpSuccess: UIAlertController = UIAlertController(title: "Sign up success", message: "Sign up success", preferredStyle: UIAlertControllerStyle.Alert);
-                //加入UIAlertAction....
+                
                 
             } else {
                 println("Sign up failed!")
@@ -66,6 +73,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         PFUser.currentUser().save();
         
         picker.dismissViewControllerAnimated(true, completion: nil);
+        
+        dispatch_async(dispatch_get_main_queue()){
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            var TimeLineViewController: UINavigationController = storyboard.instantiateViewControllerWithIdentifier("main") as! UINavigationController;
+            self.presentViewController(TimeLineViewController, animated: true, completion: nil);
+        }
     }
     
     func scaleImageWith(image: UIImage, and newSize: CGSize) -> UIImage{
@@ -76,7 +89,16 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         return newImage;
     }
-
+    
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        view.endEditing(true);
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder();
+        return true;
+    }
     
     
     

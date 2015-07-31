@@ -8,22 +8,42 @@
 
 import UIKit
 
-class LogInSignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class LogInSignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var usernameTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    
+    @IBOutlet weak var logInBtnOutlet: UIButton!
     
     @IBAction func logInBtn(sender: UIButton) {
         logIn();
     }
     
+    @IBAction func signUpBtn(sender: UIButton) {
+        signUp();
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        usernameTextField.delegate = self;
+        passwordTextField.delegate = self;
+        logInBtnOutlet.layer.cornerRadius = 5;
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder();
+        return true
+    }
+
     func logIn(){
+        activityIndicator.hidden = false
+        activityIndicator.startAnimating();
+        
         var user = PFUser();
         user.username = usernameTextField.text;
         user.password = passwordTextField.text;
@@ -40,6 +60,7 @@ class LogInSignUpViewController: UIViewController, UIImagePickerControllerDelega
                     self.presentViewController(TimeLineViewController, animated: true, completion: nil);
                 }
             }else{
+                self.activityIndicator.stopAnimating();
                 println("Login Failed");
                 var loginFail: UIAlertController = UIAlertController(title: "Login failed", message: "Please reenter Username and Password", preferredStyle: UIAlertControllerStyle.Alert);
                 var loginFailAction: UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil);
@@ -50,11 +71,12 @@ class LogInSignUpViewController: UIViewController, UIImagePickerControllerDelega
         }
     }
     
-    @IBAction func signUpBtn(sender: UIButton) {
-        signUp();
-    }
+
     
     func signUp(){
+        activityIndicator.hidden = false
+        activityIndicator.startAnimating();
+        
         var sweeter: PFUser = PFUser();
         sweeter.username = usernameTextField.text;
         sweeter.password = passwordTextField.text;
@@ -71,6 +93,7 @@ class LogInSignUpViewController: UIViewController, UIImagePickerControllerDelega
                 self.presentViewController(imagePicker, animated: true, completion: nil);
                 
             } else {
+                self.activityIndicator.stopAnimating();
                 println("Sign up failed!")
                 var signUpFail: UIAlertController = UIAlertController(title: "Sign up failed", message: "帳號已經有人使用了！！", preferredStyle: UIAlertControllerStyle.Alert);
                 var signUpFailAction: UIAlertAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil);
@@ -92,8 +115,12 @@ class LogInSignUpViewController: UIViewController, UIImagePickerControllerDelega
         let imageFile: PFFile = PFFile(data: imageData);
         PFUser.currentUser().setObject(imageFile, forKey: "profileImage")
         PFUser.currentUser().save();
+        
+        
     
         picker.dismissViewControllerAnimated(true, completion: nil);
+        
+        activityIndicator.stopAnimating();
     }
 
     func scaleImageWith(image: UIImage, and newSize: CGSize) -> UIImage{
@@ -105,8 +132,10 @@ class LogInSignUpViewController: UIViewController, UIImagePickerControllerDelega
         return newImage;
     }
 
-
-
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        view.endEditing(true);
+    }
+    
 
 
 
