@@ -12,11 +12,20 @@ class DirectMessageTableViewController: UITableViewController, UISearchBarDelega
 
     @IBOutlet var searchBar: UISearchBar! = UISearchBar()
     
+    @IBOutlet weak var open: UIBarButtonItem!
    // var userList = [PFUser]()
     var userList: NSMutableArray = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            println("test")
+            open.target = self.revealViewController()
+            open.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
         
         searchBar.delegate = self
         

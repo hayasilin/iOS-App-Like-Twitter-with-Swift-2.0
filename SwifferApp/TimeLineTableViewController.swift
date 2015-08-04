@@ -12,9 +12,17 @@ import UIKit
 class TimeLineTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     
     var timelineData = [PFObject]();
+    @IBOutlet weak var open: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            println("test")
+            open.target = self.revealViewController()
+            open.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
         self.loadData();
         
@@ -149,9 +157,7 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
                 self.timelineData = objects.reverse() as! [PFObject]
                 self.tableView.reloadData();
             }
-            
         }
-        
     }
     
     @IBAction func logOut(sender: UIBarButtonItem) {

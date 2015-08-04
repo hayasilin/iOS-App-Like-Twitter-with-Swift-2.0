@@ -24,8 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate  {
         
         //end
         
+        //UINavigationController
         UINavigationBar.appearance().barTintColor = UIColor.purpleColor();
         UINavigationBar.appearance().tintColor = UIColor.whiteColor();
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()];
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent;
 
         Parse.setApplicationId("v8iskmxnkY8cyQOELQ7NdP5qkaCannLlb9kwKWPk", clientKey: "aV9APeDVSHYoRvm5DK1zAC3gfTXaHiKqONL9vDOS")
         

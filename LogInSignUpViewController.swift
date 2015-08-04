@@ -13,15 +13,11 @@ class LogInSignUpViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var usernameTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var logInBtnOutlet: UIButton!
-    
     @IBAction func logInBtn(sender: UIButton) {
         logIn();
     }
-    
     @IBAction func signUpBtn(sender: UIButton) {
         signUp();
     }
@@ -56,8 +52,9 @@ class LogInSignUpViewController: UIViewController, UIImagePickerControllerDelega
                 
                 dispatch_async(dispatch_get_main_queue()){
                     var storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    var TimeLineViewController: UINavigationController = storyboard.instantiateViewControllerWithIdentifier("main") as! UINavigationController;
-                    self.presentViewController(TimeLineViewController, animated: true, completion: nil);
+                    var SWViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("swVC") as! UIViewController;
+                    
+                    self.presentViewController(SWViewController, animated: true, completion: nil);
                 }
             }else{
                 self.activityIndicator.stopAnimating();
