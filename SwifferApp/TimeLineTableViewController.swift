@@ -14,11 +14,11 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
     var timelineData = [PFObject]();
     @IBOutlet weak var open: UIBarButtonItem!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if self.revealViewController() != nil {
-            println("test")
             open.target = self.revealViewController()
             open.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
@@ -29,11 +29,22 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
         if PFUser.currentUser() == nil {
             self.showLoginSignUp();
         }
+        
+        self.refreshControl = UIRefreshControl();
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh");
+        self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
     }
     
+    
+    func refresh(sender:AnyObject){
+        println("refresh")
+        self.loadData();
+        self.refreshControl?.endRefreshing();
+    }
+
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated);
-        self.loadData();
+        //self.loadData();
         
         var footerView: UIView = UIView(frame: CGRectMake(0, 0, self.view.frame.size.width, 50))
         self.tableView.tableFooterView = footerView;

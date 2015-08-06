@@ -38,11 +38,6 @@
 		ACB6AF8F1B6CAFFC005BDB76 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AF8E1B6CAFFC005BDB76 /* SWRevealViewController.m */; };
 		ACB6AF911B6CB1BA005BDB76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AF901B6CB1BA005BDB76 /* ViewController.swift */; };
 		ACB6AF931B6CB34C005BDB76 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AF921B6CB34C005BDB76 /* BackTableVC.swift */; };
-		ACB6AF951B6CB749005BDB76 /* Hello.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AF941B6CB749005BDB76 /* Hello.swift */; };
-		ACB6AF971B6CB7AF005BDB76 /* Second.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AF961B6CB7AF005BDB76 /* Second.swift */; };
-		ACB6AF9E1B6CEA1E005BDB76 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AF9D1B6CEA1E005BDB76 /* MenuController.swift */; };
-		ACB6AFA01B6CEC0B005BDB76 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AF9F1B6CEC0B005BDB76 /* firstViewController.swift */; };
-		ACB6AFA21B6CEC1E005BDB76 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AFA11B6CEC1E005BDB76 /* secondViewController.swift */; };
 		ACC83B9C1B63E464003D4C17 /* LogInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC83B9B1B63E464003D4C17 /* LogInSignUpViewController.swift */; };
 		ACC83B9E1B63EE27003D4C17 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC83B9D1B63EE27003D4C17 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
@@ -94,11 +89,6 @@
 		ACB6AF8E1B6CAFFC005BDB76 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		ACB6AF901B6CB1BA005BDB76 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ACB6AF921B6CB34C005BDB76 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
-		ACB6AF941B6CB749005BDB76 /* Hello.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hello.swift; sourceTree = "<group>"; };
-		ACB6AF961B6CB7AF005BDB76 /* Second.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Second.swift; sourceTree = "<group>"; };
-		ACB6AF9D1B6CEA1E005BDB76 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		ACB6AF9F1B6CEC0B005BDB76 /* firstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
-		ACB6AFA11B6CEC1E005BDB76 /* secondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
 		ACC83B9B1B63E464003D4C17 /* LogInSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInSignUpViewController.swift; path = ../LogInSignUpViewController.swift; sourceTree = "<group>"; };
 		ACC83B9D1B63EE27003D4C17 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
 		B8CA4989B9BA87A825871865 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,11 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				ACB4F7F61B70E4D600708B0F /* MapViewController.swift */,
-				ACB6AFA11B6CEC1E005BDB76 /* secondViewController.swift */,
-				ACB6AF9F1B6CEC0B005BDB76 /* firstViewController.swift */,
-				ACB6AF9D1B6CEA1E005BDB76 /* MenuController.swift */,
-				ACB6AF961B6CB7AF005BDB76 /* Second.swift */,
-				ACB6AF941B6CB749005BDB76 /* Hello.swift */,
 				ACB6AF921B6CB34C005BDB76 /* BackTableVC.swift */,
 				ACB6AF901B6CB1BA005BDB76 /* ViewController.swift */,
 				141358581A0EB06F000E08A8 /* Frameworks */,
@@ -384,14 +369,11 @@
 			files = (
 				14C7AE9E1A2543B500F777EA /* SwifferApp-Bridging-Header.h in Sources */,
 				AC8594FF1B6A4952008436B4 /* EntryViewController.swift in Sources */,
-				ACB6AF971B6CB7AF005BDB76 /* Second.swift in Sources */,
 				1413581C1A0EAEC7000E08A8 /* AppDelegate.swift in Sources */,
 				ACC83B9E1B63EE27003D4C17 /* SignUpViewController.swift in Sources */,
-				ACB6AF951B6CB749005BDB76 /* Hello.swift in Sources */,
 				ACC83B9C1B63E464003D4C17 /* LogInSignUpViewController.swift in Sources */,
 				ACB4F7F71B70E4D600708B0F /* MapViewController.swift in Sources */,
 				ACB6AF931B6CB34C005BDB76 /* BackTableVC.swift in Sources */,
-				ACB6AF9E1B6CEA1E005BDB76 /* MenuController.swift in Sources */,
 				AC8594FD1B6A481E008436B4 /* IntroductionViewController.swift in Sources */,
 				ACB6AF911B6CB1BA005BDB76 /* ViewController.swift in Sources */,
 				140322191A0ECC5200CAEDA4 /* TimeLineTableViewController.swift in Sources */,
@@ -399,8 +381,6 @@
 				ACB6AF8F1B6CAFFC005BDB76 /* SWRevealViewController.m in Sources */,
 				14177D0B1A143D4E00BBE607 /* DirectMessageTableViewController.swift in Sources */,
 				1403221B1A0ECD3200CAEDA4 /* ComposeViewController.swift in Sources */,
-				ACB6AFA21B6CEC1E005BDB76 /* secondViewController.swift in Sources */,
-				ACB6AFA01B6CEC0B005BDB76 /* firstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

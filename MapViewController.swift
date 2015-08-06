@@ -13,6 +13,7 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var open: UIBarButtonItem!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var myNameLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +27,9 @@ class MapViewController: UIViewController {
         let initialLocation = CLLocation(latitude: 25.0142685, longitude: 121.5437686)
         let regionRadius: CLLocationDistance = 1000
         
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance(initialLocation.coordinate,
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(initialLocation.coordinate,
                 regionRadius * 2.0, regionRadius * 2.0)
-            mapView.setRegion(coordinateRegion, animated: true)
+        mapView.setRegion(coordinateRegion, animated: true)
     
         
         let dropPin = MKPointAnnotation()

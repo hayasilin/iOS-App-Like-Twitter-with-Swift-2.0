@@ -17,12 +17,9 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         usernameTextField.delegate = self;
         passwordTextField.delegate = self;
-        
         signUpBtnOutlet.layer.cornerRadius = 5;
-        
     }
     
     @IBAction func signUpBtn(sender: UIButton) {
@@ -76,8 +73,16 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         dispatch_async(dispatch_get_main_queue()){
             var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            var SWViewController: UIViewController = storyboard.instantiateViewControllerWithIdentifier("swVC") as! UIViewController;
+            
+            self.presentViewController(SWViewController, animated: true, completion: nil);
+        
+        /*
+        dispatch_async(dispatch_get_main_queue()){
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
             var TimeLineViewController: UINavigationController = storyboard.instantiateViewControllerWithIdentifier("main") as! UINavigationController;
             self.presentViewController(TimeLineViewController, animated: true, completion: nil);
+*/
         }
     }
     

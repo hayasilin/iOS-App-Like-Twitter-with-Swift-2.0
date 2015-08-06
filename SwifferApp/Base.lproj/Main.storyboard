@@ -449,7 +449,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Efc-Nj-jRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1509" y="355"/>
+            <point key="canvasLocation" x="1649" y="853"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="lxI-PR-8Ys">
@@ -459,7 +459,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8za-iS-8B6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1874" y="10"/>
+            <point key="canvasLocation" x="2014" y="508"/>
         </scene>
         <!--Introduction View Controller-->
         <scene sceneID="EJ4-qs-Ymm">
@@ -507,7 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4w-0U-Cvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1874" y="716"/>
+            <point key="canvasLocation" x="2014" y="1214"/>
         </scene>
         <!--Log In Sign Up View Controller-->
         <scene sceneID="qAf-p3-0Ej">
@@ -566,7 +566,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="32h-M3-4WE">
-                                <rect key="frame" x="142" y="265" width="37" height="37"/>
+                                <rect key="frame" x="143" y="235" width="37" height="37"/>
                             </activityIndicatorView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入您的密碼" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VvK-bl-XrR">
                                 <rect key="frame" x="16" y="202" width="288" height="30"/>
@@ -589,6 +589,7 @@
                         <color key="backgroundColor" red="0.64151889669999995" green="0.13254243560000001" blue="0.87547348479999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Fxx-Yw-Lzj" secondAttribute="centerX" constant="-0.5" id="5YU-nR-660"/>
+                            <constraint firstItem="32h-M3-4WE" firstAttribute="top" secondItem="VvK-bl-XrR" secondAttribute="bottom" constant="3" id="7cm-Iv-57z"/>
                             <constraint firstItem="6AR-6s-OSy" firstAttribute="top" secondItem="ZTj-R6-RgU" secondAttribute="bottom" constant="126" id="7dy-Dd-zIq"/>
                             <constraint firstItem="Fxx-Yw-Lzj" firstAttribute="top" secondItem="EqL-eI-Zsj" secondAttribute="bottom" constant="19" id="Jxk-Il-MlN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="b2r-b4-yHm" secondAttribute="trailing" constant="34" id="Kbz-Qs-HK0"/>
@@ -597,15 +598,15 @@
                             <constraint firstItem="6AR-6s-OSy" firstAttribute="trailing" secondItem="VvK-bl-XrR" secondAttribute="trailing" id="RLQ-1L-GSA"/>
                             <constraint firstItem="pgU-su-Spe" firstAttribute="top" secondItem="ZTj-R6-RgU" secondAttribute="bottom" constant="16" id="ReA-Sd-9g4"/>
                             <constraint firstItem="5cv-xf-GOe" firstAttribute="top" secondItem="b2r-b4-yHm" secondAttribute="bottom" constant="24" id="YXM-ug-6qp"/>
-                            <constraint firstAttribute="centerX" secondItem="32h-M3-4WE" secondAttribute="centerX" constant="-0.5" id="abd-gQ-1Jh"/>
+                            <constraint firstAttribute="centerX" secondItem="32h-M3-4WE" secondAttribute="centerX" constant="-1.5" id="Z2m-kK-pyV"/>
                             <constraint firstAttribute="centerX" secondItem="pgU-su-Spe" secondAttribute="centerX" constant="-0.5" id="ano-je-g9v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EqL-eI-Zsj" secondAttribute="trailing" constant="17" id="dcf-wT-u92"/>
                             <constraint firstItem="b2r-b4-yHm" firstAttribute="leading" secondItem="RMU-hX-uoP" secondAttribute="leadingMargin" constant="34" id="e5L-SV-NOT"/>
                             <constraint firstItem="EqL-eI-Zsj" firstAttribute="leading" secondItem="RMU-hX-uoP" secondAttribute="leadingMargin" constant="18" id="re5-eJ-2R7"/>
                             <constraint firstItem="6AR-6s-OSy" firstAttribute="leading" secondItem="VvK-bl-XrR" secondAttribute="leading" id="s0X-Zg-blx"/>
+                            <constraint firstItem="EqL-eI-Zsj" firstAttribute="top" secondItem="32h-M3-4WE" secondAttribute="bottom" constant="1" id="sdQ-Sp-UZI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6AR-6s-OSy" secondAttribute="trailing" id="ula-RQ-K5u"/>
                             <constraint firstItem="VvK-bl-XrR" firstAttribute="top" secondItem="6AR-6s-OSy" secondAttribute="bottom" constant="26" id="uvh-R8-pjL"/>
-                            <constraint firstAttribute="centerY" secondItem="32h-M3-4WE" secondAttribute="centerY" constant="0.5" id="wed-q1-4bE"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -618,7 +619,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xT-lW-wDc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2227" y="355"/>
+            <point key="canvasLocation" x="2367" y="853"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="o6v-HP-ab5">
@@ -724,7 +725,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8PH-wC-Y8R" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2227" y="1056"/>
+            <point key="canvasLocation" x="2367" y="1554"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="A3z-4e-Sbc">
@@ -756,7 +757,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="fSl-Sz-Uba">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="DP0-ye-A4n">
                                 <cells>
@@ -785,7 +786,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Time Line" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obf-CZ-O6q">
                                                     <rect key="frame" x="8" y="14" width="103" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -802,7 +803,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Direct Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvc-Co-4T1">
                                                     <rect key="frame" x="8" y="14" width="120" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -819,7 +820,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cez-JT-Vya">
                                                     <rect key="frame" x="8" y="14" width="35" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -864,6 +865,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="l8a-3V-0Wh"/>
-        <segue reference="8KT-Do-FQg"/>
+        <segue reference="EXk-SZ-KF4"/>
     </inferredMetricsTieBreakers>
 </document>
