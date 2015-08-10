@@ -105,12 +105,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         return true;
     }
     
-    
-    
-    
-    
-
-    override func didReceiveMemoryWarning() {
+        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

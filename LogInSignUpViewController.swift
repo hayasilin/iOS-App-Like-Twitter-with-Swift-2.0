@@ -134,6 +134,8 @@ class LogInSignUpViewController: UIViewController, UIImagePickerControllerDelega
     }
     
 
+    
+
 
 
 }

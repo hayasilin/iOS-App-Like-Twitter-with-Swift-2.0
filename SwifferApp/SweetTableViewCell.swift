@@ -16,6 +16,7 @@ class SweetTableViewCell: UITableViewCell {
     @IBOutlet var sweetTextView: UITextView! = UITextView()
     @IBOutlet var profileImageView: UIImageView! = UIImageView()
     @IBOutlet var location: UIButton!;
+    @IBOutlet weak var emilLabel: UIButton!
   
     
     override func awakeFromNib() {
@@ -33,5 +34,15 @@ class SweetTableViewCell: UITableViewCell {
         println("Location");
         
     }
+    
+    
+    @IBAction func emailBtn(sender: AnyObject) {
+        println("email")
+    }
+    
+    
+    
+    
+    
     
 }

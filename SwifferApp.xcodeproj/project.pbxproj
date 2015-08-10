@@ -34,12 +34,15 @@
 		9B6DF2E07F91ACF7C3314724 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4923652D8947A0A379303EF8 /* libPods.a */; };
 		AC8594FD1B6A481E008436B4 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8594FC1B6A481E008436B4 /* IntroductionViewController.swift */; };
 		AC8594FF1B6A4952008436B4 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8594FE1B6A4952008436B4 /* EntryViewController.swift */; };
+		ACA9E7C81B75DC5400CF73FD /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9E7C71B75DC5400CF73FD /* ForgotPasswordViewController.swift */; };
 		ACB4F7F71B70E4D600708B0F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F7F61B70E4D600708B0F /* MapViewController.swift */; };
 		ACB6AF8F1B6CAFFC005BDB76 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AF8E1B6CAFFC005BDB76 /* SWRevealViewController.m */; };
 		ACB6AF911B6CB1BA005BDB76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AF901B6CB1BA005BDB76 /* ViewController.swift */; };
 		ACB6AF931B6CB34C005BDB76 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AF921B6CB34C005BDB76 /* BackTableVC.swift */; };
 		ACC83B9C1B63E464003D4C17 /* LogInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC83B9B1B63E464003D4C17 /* LogInSignUpViewController.swift */; };
 		ACC83B9E1B63EE27003D4C17 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC83B9D1B63EE27003D4C17 /* SignUpViewController.swift */; };
+		ACD827CB1B78D3E300C1E8B6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD827CA1B78D3E300C1E8B6 /* MessageUI.framework */; };
+		ACD909681B73994D00039EC6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD909671B73994D00039EC6 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,7 @@
 		4923652D8947A0A379303EF8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8594FC1B6A481E008436B4 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		AC8594FE1B6A4952008436B4 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryViewController.swift; path = ../EntryViewController.swift; sourceTree = "<group>"; };
+		ACA9E7C71B75DC5400CF73FD /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		ACB4F7F61B70E4D600708B0F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ACB6AF8D1B6CAFFC005BDB76 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		ACB6AF8E1B6CAFFC005BDB76 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		ACB6AF921B6CB34C005BDB76 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
 		ACC83B9B1B63E464003D4C17 /* LogInSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInSignUpViewController.swift; path = ../LogInSignUpViewController.swift; sourceTree = "<group>"; };
 		ACC83B9D1B63EE27003D4C17 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
+		ACD827CA1B78D3E300C1E8B6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		ACD909671B73994D00039EC6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B8CA4989B9BA87A825871865 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E94A1086F241FA9705C3243A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD827CB1B78D3E300C1E8B6 /* MessageUI.framework in Frameworks */,
 				141984531A102DFE00999767 /* Accounts.framework in Frameworks */,
 				141984511A102D8300999767 /* Social.framework in Frameworks */,
 				1413584E1A0EAFB4000E08A8 /* SystemConfiguration.framework in Frameworks */,
@@ -131,6 +138,8 @@
 		1413580D1A0EAEC7000E08A8 = {
 			isa = PBXGroup;
 			children = (
+				ACA9E7C71B75DC5400CF73FD /* ForgotPasswordViewController.swift */,
+				ACD909671B73994D00039EC6 /* ProfileViewController.swift */,
 				ACB4F7F61B70E4D600708B0F /* MapViewController.swift */,
 				ACB6AF921B6CB34C005BDB76 /* BackTableVC.swift */,
 				ACB6AF901B6CB1BA005BDB76 /* ViewController.swift */,
@@ -202,6 +211,7 @@
 		141358581A0EB06F000E08A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACD827CA1B78D3E300C1E8B6 /* MessageUI.framework */,
 				141984521A102DFE00999767 /* Accounts.framework */,
 				141984501A102D8300999767 /* Social.framework */,
 				141358501A0EB037000E08A8 /* Bolts.framework */,
@@ -377,8 +387,10 @@
 				AC8594FD1B6A481E008436B4 /* IntroductionViewController.swift in Sources */,
 				ACB6AF911B6CB1BA005BDB76 /* ViewController.swift in Sources */,
 				140322191A0ECC5200CAEDA4 /* TimeLineTableViewController.swift in Sources */,
+				ACA9E7C81B75DC5400CF73FD /* ForgotPasswordViewController.swift in Sources */,
 				1403221D1A0ED59400CAEDA4 /* SweetTableViewCell.swift in Sources */,
 				ACB6AF8F1B6CAFFC005BDB76 /* SWRevealViewController.m in Sources */,
+				ACD909681B73994D00039EC6 /* ProfileViewController.swift in Sources */,
 				14177D0B1A143D4E00BBE607 /* DirectMessageTableViewController.swift in Sources */,
 				1403221B1A0ECD3200CAEDA4 /* ComposeViewController.swift in Sources */,
 			);
