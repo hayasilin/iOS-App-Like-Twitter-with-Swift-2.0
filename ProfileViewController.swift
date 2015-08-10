@@ -12,8 +12,6 @@ class ProfileViewController: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet weak var open: UIBarButtonItem!
     @IBOutlet weak var accountField: UITextField!
-    @IBOutlet weak var emailField: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,15 +23,12 @@ class ProfileViewController: UITableViewController, UITextFieldDelegate {
         }
         
         accountField.delegate = self;
-        emailField.delegate = self;
-        
         
         let tapGesture = UITapGestureRecognizer(target: self, action: Selector("hideKeyboard"))
         tapGesture.cancelsTouchesInView = true
         tableView.addGestureRecognizer(tapGesture)
         
         accountField.text = PFUser.currentUser().username;
-        emailField.text = PFUser.currentUser().email;
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +39,6 @@ class ProfileViewController: UITableViewController, UITextFieldDelegate {
     func hideKeyboard() {
         tableView.endEditing(true)
     }
-
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder();

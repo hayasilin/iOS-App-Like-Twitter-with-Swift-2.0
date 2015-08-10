@@ -42,6 +42,8 @@
 		ACC83B9C1B63E464003D4C17 /* LogInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC83B9B1B63E464003D4C17 /* LogInSignUpViewController.swift */; };
 		ACC83B9E1B63EE27003D4C17 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC83B9D1B63EE27003D4C17 /* SignUpViewController.swift */; };
 		ACD827CB1B78D3E300C1E8B6 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD827CA1B78D3E300C1E8B6 /* MessageUI.framework */; };
+		ACD8282D1B78E77B00C1E8B6 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD8282C1B78E77B00C1E8B6 /* ChangePasswordViewController.swift */; };
+		ACD8282F1B78EC0200C1E8B6 /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD8282E1B78EC0200C1E8B6 /* ChangeEmailViewController.swift */; };
 		ACD909681B73994D00039EC6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD909671B73994D00039EC6 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +98,8 @@
 		ACC83B9B1B63E464003D4C17 /* LogInSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInSignUpViewController.swift; path = ../LogInSignUpViewController.swift; sourceTree = "<group>"; };
 		ACC83B9D1B63EE27003D4C17 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
 		ACD827CA1B78D3E300C1E8B6 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		ACD8282C1B78E77B00C1E8B6 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		ACD8282E1B78EC0200C1E8B6 /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
 		ACD909671B73994D00039EC6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B8CA4989B9BA87A825871865 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E94A1086F241FA9705C3243A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 		1413580D1A0EAEC7000E08A8 = {
 			isa = PBXGroup;
 			children = (
+				ACD8282E1B78EC0200C1E8B6 /* ChangeEmailViewController.swift */,
+				ACD8282C1B78E77B00C1E8B6 /* ChangePasswordViewController.swift */,
 				ACA9E7C71B75DC5400CF73FD /* ForgotPasswordViewController.swift */,
 				ACD909671B73994D00039EC6 /* ProfileViewController.swift */,
 				ACB4F7F61B70E4D600708B0F /* MapViewController.swift */,
@@ -388,7 +394,9 @@
 				ACB6AF911B6CB1BA005BDB76 /* ViewController.swift in Sources */,
 				140322191A0ECC5200CAEDA4 /* TimeLineTableViewController.swift in Sources */,
 				ACA9E7C81B75DC5400CF73FD /* ForgotPasswordViewController.swift in Sources */,
+				ACD8282F1B78EC0200C1E8B6 /* ChangeEmailViewController.swift in Sources */,
 				1403221D1A0ED59400CAEDA4 /* SweetTableViewCell.swift in Sources */,
+				ACD8282D1B78E77B00C1E8B6 /* ChangePasswordViewController.swift in Sources */,
 				ACB6AF8F1B6CAFFC005BDB76 /* SWRevealViewController.m in Sources */,
 				ACD909681B73994D00039EC6 /* ProfileViewController.swift in Sources */,
 				14177D0B1A143D4E00BBE607 /* DirectMessageTableViewController.swift in Sources */,
