@@ -12,6 +12,7 @@ class ProfileViewController: UITableViewController, UITextFieldDelegate {
 
     @IBOutlet weak var open: UIBarButtonItem!
     @IBOutlet weak var accountField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class ProfileViewController: UITableViewController, UITextFieldDelegate {
         tableView.addGestureRecognizer(tapGesture)
         
         accountField.text = PFUser.currentUser().username;
+        emailField.text = PFUser.currentUser().email;
     }
 
     override func didReceiveMemoryWarning() {

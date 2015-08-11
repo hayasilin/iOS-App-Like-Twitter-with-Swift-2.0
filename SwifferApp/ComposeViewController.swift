@@ -50,6 +50,7 @@ class ComposeViewController: UIViewController, UITextViewDelegate, UITextFieldDe
             sweet["title"] = titleTextView.text;
             sweet["content"] = sweetTextView.text;
             sweet["sweeter"] = PFUser.currentUser();
+            sweet["email"] = PFUser.currentUser().email;
             sweet["location"] = locationTextView.text;
             sweet.saveInBackgroundWithTarget(nil, selector: nil);
             

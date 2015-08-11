@@ -44,20 +44,22 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated);
-        //self.loadData();
+        self.loadData();
     }
     
     func loadData(){
-        timelineData.removeAll(keepCapacity: false);
         var findTimelineData: PFQuery = PFQuery(className: "Sweets");
+        findTimelineData.orderByDescending("createdAt")
         findTimelineData.findObjectsInBackgroundWithBlock{
             (objects:[AnyObject]!, error: NSError!) -> Void in
             
             if error == nil{
-                self.timelineData = objects.reverse() as! [PFObject]
+                self.timelineData.removeAll(keepCapacity: false);
+                self.timelineData = objects as! [PFObject]
                 self.tableView.reloadData();
             }
         }
+
     }
     
     /*
@@ -85,8 +87,7 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
         cell.sweetTextView.text = sweet.objectForKey("content") as! String;
         cell.titleTextView.text = sweet.objectForKey("title") as! String;
         cell.location.setTitle((sweet.objectForKey("location")) as? String, forState: UIControlState.Normal);
-        cell.emilLabel.setTitle((PFUser.currentUser().email)!, forState: UIControlState.Normal);
-        
+        cell.emilLabel.setTitle((sweet.objectForKey("email")) as? String, forState: UIControlState.Normal);
         
         //Add appearing animation
         /*
@@ -96,7 +97,6 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
         cell.titleTextView.alpha = 0;
         */
 
-        
         //Show Date
         var dataFormer:NSDateFormatter = NSDateFormatter();
         dataFormer.dateFormat = "yyyy-MM-dd HH:mm";
