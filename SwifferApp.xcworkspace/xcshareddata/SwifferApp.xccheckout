@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FDE5542A-D05F-45E7-A08B-2BDAD395AC1E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SwifferApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BDF3DDB3682B6CDE6BE01B107B0EBDD421C19B79</key>
+		<string>https://github.com/hayasilin/Crack-the-term.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SwifferApp.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BDF3DDB3682B6CDE6BE01B107B0EBDD421C19B79</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/hayasilin/Crack-the-term.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BDF3DDB3682B6CDE6BE01B107B0EBDD421C19B79</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BDF3DDB3682B6CDE6BE01B107B0EBDD421C19B79</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Crack-the-term</string>
+		</dict>
+	</array>
+</dict>
+</plist>

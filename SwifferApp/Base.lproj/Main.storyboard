@@ -144,6 +144,37 @@
             </objects>
             <point key="canvasLocation" x="4629" y="851"/>
         </scene>
+        <!--Send Email View Controller-->
+        <scene sceneID="pie-PO-F62">
+            <objects>
+                <viewController storyboardIdentifier="sendmail" id="mRx-YU-JjV" customClass="SendEmailViewController" customModule="SwifferApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m1r-IB-CZc"/>
+                        <viewControllerLayoutGuide type="bottom" id="UGI-a8-EF2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7hB-Rb-pbr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="N4J-OW-O9i">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="N4J-OW-O9i" secondAttribute="centerX" id="bBD-a1-x4P"/>
+                            <constraint firstAttribute="centerY" secondItem="N4J-OW-O9i" secondAttribute="centerY" id="eWX-sG-Jch"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="indicatorView" destination="N4J-OW-O9i" id="kRu-bo-oEx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cm5-Qq-ohE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4629" y="1508"/>
+        </scene>
         <!--Direct Message Table View Controller-->
         <scene sceneID="JIg-Jb-mBy">
             <objects>
@@ -189,7 +220,7 @@
         <scene sceneID="wNa-B9-Xza">
             <objects>
                 <tableViewController id="pxb-sd-GJy" customClass="TimeLineTableViewController" customModule="SwifferApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="280" sectionHeaderHeight="22" sectionFooterHeight="22" id="rzY-1K-hOy">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="280" sectionHeaderHeight="22" sectionFooterHeight="22" id="rzY-1K-hOy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.26419853710000002" blue="0.85104491319999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -227,7 +258,7 @@
                                                 <constraint firstAttribute="height" constant="50" id="YsP-2P-pd2"/>
                                             </constraints>
                                         </imageView>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2a-50-m7d">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2a-50-m7d">
                                             <rect key="frame" x="10" y="101" width="300" height="80"/>
                                             <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                             <accessibility key="accessibilityConfiguration">
@@ -240,7 +271,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18P-7z-7Ca">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18P-7z-7Ca">
                                             <rect key="frame" x="10" y="66" width="300" height="30"/>
                                             <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                             <accessibility key="accessibilityConfiguration">
@@ -269,6 +300,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="loctionBtn:" destination="CMy-9n-CdZ" eventType="touchUpInside" id="rtI-qW-nPO"/>
+                                                <segue destination="0N2-KA-Ana" kind="show" id="aW8-4i-4Oa"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59g-qt-ddY">
@@ -278,6 +310,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="emailBtn:" destination="CMy-9n-CdZ" eventType="touchUpInside" id="tra-XN-36h"/>
+                                                <segue destination="mRx-YU-JjV" kind="presentation" id="t6G-de-4Tu"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -378,13 +411,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="bgD-Rf-GKE" secondAttribute="trailing" id="2FQ-aa-dze"/>
-                            <constraint firstItem="GiL-pH-2Ux" firstAttribute="top" secondItem="bgD-Rf-GKE" secondAttribute="bottom" id="2JF-uj-Zmd"/>
+                            <constraint firstItem="GiL-pH-2Ux" firstAttribute="top" secondItem="bgD-Rf-GKE" secondAttribute="bottom" constant="-44" id="2JF-uj-Zmd"/>
                             <constraint firstItem="bgD-Rf-GKE" firstAttribute="top" secondItem="5Bf-gl-lWw" secondAttribute="top" id="hH1-Rp-JFI"/>
                             <constraint firstItem="bgD-Rf-GKE" firstAttribute="leading" secondItem="5Bf-gl-lWw" secondAttribute="leading" id="qSp-Va-lbs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="d5n-oR-9UJ">
                         <barButtonItem key="leftBarButtonItem" title="Open" id="VhO-8d-b4v"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="fyq-cc-Oi6">
+                            <connections>
+                                <action selector="addressSearchBtn:" destination="0N2-KA-Ana" id="u0X-j6-GAW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="bgD-Rf-GKE" id="3bW-pF-OxB"/>
@@ -1060,6 +1098,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPY-RC-CIe">
                                                     <rect key="frame" x="8" y="0.0" width="312" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="登出Log Out">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -1145,6 +1184,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAs-H5-PsG">
                                                     <rect key="frame" x="8" y="0.0" width="312" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="寄信給作者">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -1209,7 +1249,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EXk-SZ-KF4"/>
         <segue reference="l8a-3V-0Wh"/>
+        <segue reference="aW8-4i-4Oa"/>
+        <segue reference="EXk-SZ-KF4"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -30,10 +30,10 @@
 		14177D0B1A143D4E00BBE607 /* DirectMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14177D0A1A143D4E00BBE607 /* DirectMessageTableViewController.swift */; };
 		141984511A102D8300999767 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141984501A102D8300999767 /* Social.framework */; };
 		141984531A102DFE00999767 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 141984521A102DFE00999767 /* Accounts.framework */; };
-		14C7AE9E1A2543B500F777EA /* SwifferApp-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 141358591A0EB112000E08A8 /* SwifferApp-Bridging-Header.h */; };
 		9B6DF2E07F91ACF7C3314724 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4923652D8947A0A379303EF8 /* libPods.a */; };
 		AC8594FD1B6A481E008436B4 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8594FC1B6A481E008436B4 /* IntroductionViewController.swift */; };
 		AC8594FF1B6A4952008436B4 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8594FE1B6A4952008436B4 /* EntryViewController.swift */; };
+		ACA26F9B1B8234F1006B4F96 /* SendEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA26F9A1B8234F1006B4F96 /* SendEmailViewController.swift */; };
 		ACA9E7C81B75DC5400CF73FD /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9E7C71B75DC5400CF73FD /* ForgotPasswordViewController.swift */; };
 		ACB4F7F71B70E4D600708B0F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB4F7F61B70E4D600708B0F /* MapViewController.swift */; };
 		ACB6AF8F1B6CAFFC005BDB76 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB6AF8E1B6CAFFC005BDB76 /* SWRevealViewController.m */; };
@@ -88,6 +88,7 @@
 		4923652D8947A0A379303EF8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8594FC1B6A481E008436B4 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		AC8594FE1B6A4952008436B4 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EntryViewController.swift; path = ../EntryViewController.swift; sourceTree = "<group>"; };
+		ACA26F9A1B8234F1006B4F96 /* SendEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmailViewController.swift; sourceTree = "<group>"; };
 		ACA9E7C71B75DC5400CF73FD /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		ACB4F7F61B70E4D600708B0F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ACB6AF8D1B6CAFFC005BDB76 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -140,6 +141,7 @@
 		1413580D1A0EAEC7000E08A8 = {
 			isa = PBXGroup;
 			children = (
+				ACA26F9A1B8234F1006B4F96 /* SendEmailViewController.swift */,
 				ACD8282C1B78E77B00C1E8B6 /* ChangePasswordViewController.swift */,
 				ACA9E7C71B75DC5400CF73FD /* ForgotPasswordViewController.swift */,
 				ACD909671B73994D00039EC6 /* ProfileViewController.swift */,
@@ -380,12 +382,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14C7AE9E1A2543B500F777EA /* SwifferApp-Bridging-Header.h in Sources */,
 				AC8594FF1B6A4952008436B4 /* EntryViewController.swift in Sources */,
 				1413581C1A0EAEC7000E08A8 /* AppDelegate.swift in Sources */,
 				ACC83B9E1B63EE27003D4C17 /* SignUpViewController.swift in Sources */,
 				ACC83B9C1B63E464003D4C17 /* LogInSignUpViewController.swift in Sources */,
 				ACB4F7F71B70E4D600708B0F /* MapViewController.swift in Sources */,
+				ACA26F9B1B8234F1006B4F96 /* SendEmailViewController.swift in Sources */,
 				ACB6AF931B6CB34C005BDB76 /* BackTableVC.swift in Sources */,
 				AC8594FD1B6A481E008436B4 /* IntroductionViewController.swift in Sources */,
 				ACB6AF911B6CB1BA005BDB76 /* ViewController.swift in Sources */,

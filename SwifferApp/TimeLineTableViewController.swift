@@ -89,6 +89,11 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
         cell.location.setTitle((sweet.objectForKey("location")) as? String, forState: UIControlState.Normal);
         cell.emilLabel.setTitle((sweet.objectForKey("email")) as? String, forState: UIControlState.Normal);
         
+        let sendEmail = storyboard?.instantiateViewControllerWithIdentifier("sendmail") as! SendEmailViewController;
+        
+        sendEmail.mailAddress = (sweet.objectForKey("email")) as? String;
+        
+        
         //Add appearing animation
         /*
         cell.sweetTextView.alpha = 0;
@@ -96,6 +101,11 @@ class TimeLineTableViewController: UITableViewController, UIImagePickerControlle
         cell.usernameLabel.alpha = 0;
         cell.titleTextView.alpha = 0;
         */
+        
+        
+        
+        
+        
 
         //Show Date
         var dataFormer:NSDateFormatter = NSDateFormatter();
