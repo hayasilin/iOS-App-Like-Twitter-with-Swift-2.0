@@ -1,21 +1,25 @@
 //
 //  EntryViewController.swift
-//  SwifferApp
+//  CrackTheTerm_review
 //
-//  Created by Kuan-Wei Lin on 7/30/15.
-//  Copyright (c) 2015 Kareem Khattab. All rights reserved.
+//  Created by Kuan-Wei Lin on 8/29/15.
+//  Copyright (c) 2015 Kuan-Wei Lin. All rights reserved.
 //
 
 import UIKit
 
 class EntryViewController: UIViewController, UIPageViewControllerDataSource {
     
-    var pageViewController: UIPageViewController!;
-    var pageContent: NSArray!;
-    var pageImages: NSArray!;
+    @IBOutlet weak var startBtn: UIButton!
+    
+    var pageViewController: UIPageViewController!
+    var pageContent: NSArray!
+    var pageImages: NSArray!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startBtn.layer.cornerRadius = 5
         
         self.pageContent = NSArray(objects:
             "運用Crack the term的平台，將可透過技能交換的方式，立即找到想要學習的技能，或是提供他人相關的技能",
@@ -24,14 +28,14 @@ class EntryViewController: UIViewController, UIPageViewControllerDataSource {
         );
         self.pageImages = NSArray(objects: "page1", "page2", "page3");
         
-        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PageVC") as! UIPageViewController;
+        self.pageViewController = self.storyboard?.instantiateViewControllerWithIdentifier("pageVC") as! UIPageViewController;
         
         self.pageViewController.dataSource = self;
         
-        var startVC = self.viewControllerAtIndex(0) as IntroductionViewController;
-        var viewControllers = NSArray(object: startVC);
+        let startVC = self.viewControllerAtIndex(0) as IntroductionViewController;
+        let viewControllers = NSArray(object: startVC);
         
-        self.pageViewController.setViewControllers(viewControllers as [AnyObject], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil);
+        self.pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil);
         self.pageViewController.view.frame = CGRectMake(0, 30, self.view.frame.width, self.view.frame.height - 100);
         self.addChildViewController(self.pageViewController);
         self.view.addSubview(self.pageViewController.view);
@@ -39,17 +43,12 @@ class EntryViewController: UIViewController, UIPageViewControllerDataSource {
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func viewControllerAtIndex(index: Int) -> IntroductionViewController{
         if ((self.pageContent.count == 0) || (index >= self.pageContent.count)){
             return IntroductionViewController();
         }
         
-        var vc: IntroductionViewController = self.storyboard?.instantiateViewControllerWithIdentifier("IntroVC") as! IntroductionViewController;
+        let vc: IntroductionViewController = self.storyboard?.instantiateViewControllerWithIdentifier("introVC") as! IntroductionViewController;
         vc.imageFile = self.pageImages[index] as! String;
         vc.contentText = self.pageContent[index] as! String;
         vc.pageIndex = index;
@@ -61,7 +60,7 @@ class EntryViewController: UIViewController, UIPageViewControllerDataSource {
     //MARK: - UIPageViewControllerDataSource
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        var vc = viewController as! IntroductionViewController;
+        let vc = viewController as! IntroductionViewController;
         var index = vc.pageIndex as Int;
         
         if (index == 0 || index == NSNotFound){
@@ -74,7 +73,7 @@ class EntryViewController: UIViewController, UIPageViewControllerDataSource {
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        var vc = viewController as! IntroductionViewController;
+        let vc = viewController as! IntroductionViewController;
         var index = vc.pageIndex as Int;
         if (index == NSNotFound){
             return nil;
@@ -95,5 +94,6 @@ class EntryViewController: UIViewController, UIPageViewControllerDataSource {
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0;
     }
+
     
 }

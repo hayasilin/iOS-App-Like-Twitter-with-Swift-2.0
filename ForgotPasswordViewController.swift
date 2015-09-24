@@ -1,72 +1,61 @@
 //
 //  ForgotPasswordViewController.swift
-//  SwifferApp
+//  CrackTheTerm_review
 //
-//  Created by Kuan-Wei Lin on 8/8/15.
-//  Copyright (c) 2015 Kareem Khattab. All rights reserved.
+//  Created by Kuan-Wei Lin on 8/22/15.
+//  Copyright (c) 2015 Kuan-Wei Lin. All rights reserved.
 //
 
 import UIKit
 
 class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var resentBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        emailField.delegate = self;
+        emailTextField.delegate = self
+        resentBtn.layer.cornerRadius = 5
     }
     
-    @IBAction func forgotPawwrod(sender: UIButton) {
-        var email = self.emailField.text
-
-        PFUser.requestPasswordResetForEmailInBackground(email, block: {
+    @IBAction func resentEmailAction(sender: UIButton) {
+        let email = emailTextField.text
+        
+        PFUser.requestPasswordResetForEmailInBackground(email!, block: {
             (success: Bool, error: NSError?) -> Void in
-            
             if error == nil{
-                println("寄出確認信成功")
-                let alertController = UIAlertController(title: "成功", message: "寄出確認信成功", preferredStyle: UIAlertControllerStyle.Alert)
-                let alertAction = UIAlertAction(title: "確認", style: UIAlertActionStyle.Default, handler: nil)
-                alertController.addAction(alertAction);
+                print("Resent Email successfully")
+                let alertController = UIAlertController(title: "寄出成功", message: "已經重新寄出密碼信", preferredStyle: UIAlertControllerStyle.Alert)
+                let goLoginAction = UIAlertAction(title: "前往登入頁面", style: UIAlertActionStyle.Default, handler: { (alert: UIAlertAction) -> Void in
+                    
+                    let logInViewController: UIViewController = self.storyboard?.instantiateViewControllerWithIdentifier("loginVC") as! LogInViewController
+                    self.presentViewController(logInViewController, animated: true, completion: nil)
+                })
+                
+                let cancelAction = UIAlertAction(title: "取消", style: UIAlertActionStyle.Default, handler: nil)
+                
+                alertController.addAction(goLoginAction)
+                alertController.addAction(cancelAction)
                 self.presentViewController(alertController, animated: true, completion: nil)
                 
-                //need to add pop to LogInViewController automatically;
-                
             }else{
-                println("查無此人");
-                let alertController = UIAlertController(title: "查無此信箱", message: "查無此人喔", preferredStyle: UIAlertControllerStyle.Alert);
-                let alertAction = UIAlertAction(title: "確認", style: UIAlertActionStyle.Default, handler: nil);
-                alertController.addAction(alertAction);
-                self.presentViewController(alertController, animated: true, completion: nil);
+                print("erro occur")
+                let alertController = UIAlertController(title: "查無此人", message: "並無此信箱，是否仍無註冊呢？", preferredStyle: UIAlertControllerStyle.Alert)
+                let alertAction = UIAlertAction(title: "我知道了", style: UIAlertActionStyle.Default, handler: nil)
+                alertController.addAction(alertAction)
+                self.presentViewController(alertController, animated: true, completion: nil)
             }
-            
-        });
+        })
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        view.endEditing(true)
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder();
-        return true;
+        return true
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        view.endEditing(true);
-    }
     
-        override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
